@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import './ContactForm.scss';
 import Notification from '../Notification';
 import { connect } from 'react-redux';
-import phoneBookActions from '../../redux/phoneBook/phoneBook-actions';
+import phoneBookOperations from '../../redux/phoneBook/phoneBook-operations';
 
 class ContactForm extends Component {
   state = {
@@ -121,7 +121,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
   onSubmit: (name, number) =>
-    dispatch(phoneBookActions.addContact({ name, number })),
+    dispatch(phoneBookOperations.addContact({ name, number })),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ContactForm);

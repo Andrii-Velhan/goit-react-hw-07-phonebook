@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import './Filter.scss';
 import { CSSTransition } from 'react-transition-group';
-import phoneBookActions from '../../redux/phoneBook/phoneBook-actions';
+import * as phoneBookActions from '../../redux/phoneBook/phoneBook-actions';
 import { connect } from 'react-redux';
 
 const Filter = ({ value, onChangeFilter, onClearFilter, items }) => (

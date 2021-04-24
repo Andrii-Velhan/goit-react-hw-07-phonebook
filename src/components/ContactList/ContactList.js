@@ -5,7 +5,7 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import IconButton from '../IconButton';
 import { ReactComponent as DeleteIcon } from '../../icons/delete.svg';
 import { connect } from 'react-redux';
-import phoneBookActions from '../../redux/phoneBook/phoneBook-actions';
+import * as phoneBookActions from '../../redux/phoneBook/phoneBook-actions';
 
 const ContactList = ({ items, onRemoveContact }) => {
   return (
@@ -46,7 +46,7 @@ const getVisibleContacts = (allContacts, filter) => {
   let list = allContacts.filter(({ name }) =>
     name.toLowerCase().includes(normalizedFilter),
   );
- 
+
   return list;
 };
 
