@@ -5,7 +5,7 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import IconButton from '../IconButton';
 import { ReactComponent as DeleteIcon } from '../../icons/delete.svg';
 import { connect } from 'react-redux';
-import * as phoneBookActions from '../../redux/phoneBook/phoneBook-actions';
+import phoneBookOperations from '../../redux/phoneBook/phoneBook-operations';
 
 const ContactList = ({ items, onRemoveContact }) => {
   return (
@@ -55,7 +55,7 @@ const mapStateToProps = ({ phoneBook: { items, filter } }) => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  onRemoveContact: id => dispatch(phoneBookActions.removeContact(id)),
+  onRemoveContact: id => dispatch(phoneBookOperations.removeContact(id)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ContactList);
