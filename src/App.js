@@ -10,6 +10,7 @@ import Filter from './components/Filter';
 import Logo from './components/Logo';
 import { connect } from 'react-redux';
 import phoneBookOperations from '../src/redux/phoneBook/phoneBook-operations';
+import phoneBookSelectors from './redux/phoneBook/phoneBook-selectors';
 
 class App extends Component {
   componentDidMount() {
@@ -38,8 +39,8 @@ App.propTypes = {
 };
 
 const mapStateToProps = state => ({
-  items: state.phoneBook.items,
-  isLoadingContacts: state.phoneBook.loading,
+  items: phoneBookSelectors.getAllItems(state),
+  isLoadingContacts: phoneBookSelectors.getLoading(state),
 });
 
 const mapDispatchToProps = dispatch => ({

@@ -6,6 +6,7 @@ import IconButton from '../IconButton';
 import { ReactComponent as DeleteIcon } from '../../icons/delete.svg';
 import { connect } from 'react-redux';
 import phoneBookOperations from '../../redux/phoneBook/phoneBook-operations';
+import phoneBookSelectors from '../../redux/phoneBook/phoneBook-selectors';
 
 const ContactList = ({ items, onRemoveContact }) => {
   return (
@@ -40,18 +41,8 @@ ContactList.propTypes = {
   onRemoveContact: PropTypes.func,
 };
 
-const getVisibleContacts = (allContacts, filter) => {
-  const normalizedFilter = filter.toLowerCase();
-
-  let list = allContacts.filter(({ name }) =>
-    name.toLowerCase().includes(normalizedFilter),
-  );
-
-  return list;
-};
-
-const mapStateToProps = ({ phoneBook: { items, filter } }) => ({
-  items: getVisibleContacts(items, filter),
+const mapStateToProps = state => ({
+  items: phoneBookSelectors.getVisibleContacts(state),
 });
 
 const mapDispatchToProps = dispatch => ({

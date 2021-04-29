@@ -3,6 +3,7 @@ import './Filter.scss';
 import { CSSTransition } from 'react-transition-group';
 import * as phoneBookActions from '../../redux/phoneBook/phoneBook-actions';
 import { connect } from 'react-redux';
+import phoneBookSelectors from '../../redux/phoneBook/phoneBook-selectors';
 
 const Filter = ({ value, onChangeFilter, onClearFilter, items }) => (
   <CSSTransition
@@ -34,8 +35,8 @@ Filter.propTypes = {
 };
 
 const mapStateToProps = state => ({
-  value: state.phoneBook.filter,
-  items: state.phoneBook.items,
+  value: phoneBookSelectors.getFilter(state),
+  items: phoneBookSelectors.getAllItems(state),
 });
 
 const mapDispatchToProps = dispatsh => ({
