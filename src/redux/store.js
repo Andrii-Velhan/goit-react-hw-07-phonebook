@@ -9,7 +9,7 @@ import {
   PURGE,
   REGISTER,
 } from 'redux-persist';
-import phoneBookReducer from './phoneBook/phoneBook-reducer';
+import { phoneBookReducer } from './phoneBook';
 
 const middleware = [
   ...getDefaultMiddleware({

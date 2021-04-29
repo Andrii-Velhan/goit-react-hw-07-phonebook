@@ -5,8 +5,7 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import IconButton from '../IconButton';
 import { ReactComponent as DeleteIcon } from '../../icons/delete.svg';
 import { connect } from 'react-redux';
-import phoneBookOperations from '../../redux/phoneBook/phoneBook-operations';
-import phoneBookSelectors from '../../redux/phoneBook/phoneBook-selectors';
+import { phoneBookSelectors, phoneBookOperations } from '../../redux/phoneBook';
 
 const ContactList = ({ items, onRemoveContact }) => {
   return (

@@ -9,8 +9,10 @@ import ContactForm from './components/ContactForm';
 import Filter from './components/Filter';
 import Logo from './components/Logo';
 import { connect } from 'react-redux';
-import phoneBookOperations from '../src/redux/phoneBook/phoneBook-operations';
-import phoneBookSelectors from './redux/phoneBook/phoneBook-selectors';
+import {
+  phoneBookOperations,
+  phoneBookSelectors,
+} from '../src/redux/phoneBook';
 
 class App extends Component {
   componentDidMount() {

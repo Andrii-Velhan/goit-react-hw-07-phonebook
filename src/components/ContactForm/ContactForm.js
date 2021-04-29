@@ -3,8 +3,7 @@ import PropTypes from 'prop-types';
 import './ContactForm.scss';
 import Notification from '../Notification';
 import { connect } from 'react-redux';
-import phoneBookOperations from '../../redux/phoneBook/phoneBook-operations';
-import phoneBookSelectors from '../../redux/phoneBook/phoneBook-selectors';
+import { phoneBookSelectors, phoneBookOperations } from '../../redux/phoneBook';
 class ContactForm extends Component {
   state = {
     name: '',

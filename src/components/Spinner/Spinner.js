@@ -1,14 +1,17 @@
 import React from 'react';
 import Loader from 'react-loader-spinner';
+import './Spinner.scss';
 
 const Spinner = () => (
-  <Loader
-    type="ThreeDots"
-    color="#00BFFF"
-    height={300}
-    width={300}
-    timeout={2500}
-  />
+  <div className="Loader">
+    <Loader
+      type="ThreeDots"
+      color="#00BFFF"
+      height={200}
+      width={200}
+      timeout={250}
+    />
+  </div>
 );
 
 export default Spinner;

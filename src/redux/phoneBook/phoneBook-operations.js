@@ -55,4 +55,6 @@ const removeContact = contactId => dispatch => {
     .catch(error => dispatch(removeContactError(error)));
 };
 
-export default { fetchContacts, addContact, removeContact };
+const phoneBookOperations = { fetchContacts, addContact, removeContact };
+
+export default phoneBookOperations;
