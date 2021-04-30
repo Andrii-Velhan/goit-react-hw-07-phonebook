@@ -1,4 +1,3 @@
-import './App.css';
 import 'modern-normalize/modern-normalize.css';
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
