@@ -1,16 +1,6 @@
 {
   "contacts": [
     {
-      "id": "id-1",
-      "name": "Rosie Simpson",
-      "number": "459-12-56"
-    },
-    {
-      "id": "id-2",
-      "name": "Hermione Kline",
-      "number": "443-89-12"
-    },
-    {
       "id": "id-3",
       "name": "Eden Clements",
       "number": "645-17-79"
@@ -19,6 +9,16 @@
       "id": "id-4",
       "name": "Aleksi Laiho",
       "number": "+358 666-666"
+    },
+    {
+      "name": "ddddd",
+      "number": "3333",
+      "id": "FG00Wj6"
+    },
+    {
+      "name": "214124234324",
+      "number": "435454545",
+      "id": "6vwyCh3"
     }
   ]
 }
